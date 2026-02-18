@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-green-300: oklch(87.1% 0.15 154.449);
     --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-bold: 700;
@@ -167,6 +168,9 @@
   .m-auto {
     margin: auto;
   }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
   .flex {
     display: flex;
   }
@@ -176,11 +180,23 @@
   .table {
     display: table;
   }
+  .h-88 {
+    height: calc(var(--spacing) * 88);
+  }
+  .h-\[352px\] {
+    height: 352px;
+  }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
+  }
   .w-86 {
     width: calc(var(--spacing) * 86);
   }
   .w-86\.75 {
     width: calc(var(--spacing) * 86.75);
+  }
+  .w-88 {
+    width: calc(var(--spacing) * 88);
   }
   .w-95 {
     width: calc(var(--spacing) * 95);
@@ -194,11 +210,20 @@
   .w-\[100\%\] {
     width: 100%;
   }
+  .w-\[256px\] {
+    width: 256px;
+  }
   .w-\[346px\] {
     width: 346px;
   }
   .w-\[347px\] {
     width: 347px;
+  }
+  .w-\[352\] {
+    width: 352;
+  }
+  .w-\[352px\] {
+    width: 352px;
   }
   .w-\[380px\] {
     width: 380px;
@@ -242,6 +267,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -272,6 +300,10 @@
   .border-b-2 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
+  }
+  .border-b-4 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
   }
   .border-b-\[2px\] {
     border-bottom-style: var(--tw-border-style);
@@ -391,6 +423,12 @@
   .text-\[18px\] {
     font-size: 18px;
   }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
+  .text-\[25px\] {
+    font-size: 25px;
+  }
   .text-\[36px\] {
     font-size: 36px;
   }
@@ -411,11 +449,30 @@
   .text-\[\#767676\] {
     color: #767676;
   }
+  .text-green-300 {
+    color: var(--color-green-300);
+  }
   .text-white {
     color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .shadow-\[0px_10px_30px_\(\#00000014\)\] {
+    --tw-shadow: 0px 10px 30px var(--tw-shadow-color, (#00000014));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0px_10px_30px_rgba\(\#00000014\)\] {
+    --tw-shadow: 0px 10px 30px var(--tw-shadow-color, rgba(#00000014));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0px_10px_30px_rgba\(0\,0\,0\,0\.08\)\] {
+    --tw-shadow: 0px 10px 30px var(--tw-shadow-color, rgba(0,0,0,0.08));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0px_10px_30px_rgba\(0\,0\,0\,0\.15\)\] {
+    --tw-shadow: 0px 10px 30px var(--tw-shadow-color, rgba(0,0,0,0.15));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -431,14 +488,39 @@
       display: none;
     }
   }
+  .lg\:w-5 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:w-130\.75 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 130.75);
+    }
+  }
   .lg\:w-152\.5 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 152.5);
     }
   }
+  .lg\:w-\[523px\] {
+    @media (width >= 64rem) {
+      width: 523px;
+    }
+  }
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
+    }
+  }
+  .lg\:items-center {
+    @media (width >= 64rem) {
+      align-items: center;
+    }
+  }
+  .lg\:justify-between {
+    @media (width >= 64rem) {
+      justify-content: space-between;
     }
   }
   .lg\:pb-0 {
@@ -449,6 +531,11 @@
   .lg\:pb-4 {
     @media (width >= 64rem) {
       padding-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .lg\:text-center {
+    @media (width >= 64rem) {
+      text-align: center;
     }
   }
   .lg\:text-start {
@@ -466,6 +553,71 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -476,6 +628,20 @@
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
     }
   }
